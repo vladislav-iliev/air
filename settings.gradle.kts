@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "air"
 include(":readings")
+include(":readings-testing")

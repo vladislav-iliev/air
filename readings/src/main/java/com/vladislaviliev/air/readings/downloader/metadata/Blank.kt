@@ -1,4 +1,4 @@
 package com.vladislaviliev.air.readings.downloader.metadata
 
-internal val Blank get() = Metadata("", "")
-fun Metadata.isBlank() = this == Blank
+val Metadata.Companion.Blank get() = Metadata("", "")
+fun Metadata.isBlank() = this == Metadata.Blank

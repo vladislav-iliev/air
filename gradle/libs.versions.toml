@@ -14,6 +14,8 @@ agp = "8.8.1"
 junit = "4.13.2"
 runner = "1.0.2"
 espressoCore = "3.0.2"
+jetbrainsKotlinJvm = "2.1.0"
+junitVersion = "1.2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,8 +36,10 @@ datastore-preferences = { module = "androidx.datastore:datastore-preferences", v
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
 espresso-core = { group = "com.android.support.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }

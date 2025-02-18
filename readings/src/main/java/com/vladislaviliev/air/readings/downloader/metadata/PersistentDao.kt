@@ -28,7 +28,7 @@ class PersistentDao(private val dataStore: DataStore<Preferences>) : Dao {
 
     private fun decode(prefs: Preferences): Metadata {
         val str = prefs[prefsKey]
-        if (str == null) return Blank
+        if (str == null) return Metadata.Blank
         return decode(str)
     }
 }
