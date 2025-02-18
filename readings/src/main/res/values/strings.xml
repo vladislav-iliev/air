@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="health_msg_enjoy">Enjoy your usual outdoor activities</string>
+    <string name="health_msg_possible_discomfort">Possible experience of discomfort</string>
+    <string name="health_msg_consider_reducing">If uncomfortable consider reducing activity</string>
+    <string name="health_msg_reduce_exertion">Reduce physical exertion</string>
+</resources>
