@@ -1,10 +1,7 @@
 package com.vladislaviliev.air.readings.calculations
 
 import androidx.annotation.StringRes
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.takeOrElse
 import com.vladislaviliev.air.readings.R
 import kotlin.collections.windowed
 
@@ -52,14 +49,6 @@ object Health {
 
     @StringRes
     fun getHealthMessage(pollution: Double) = healthMessages[getThresholdIndex(pollution)]
-
-    @Composable
-    fun checkUnspecifiedBackgroundColor(color: Color) =
-        color.takeOrElse(MaterialTheme.colorScheme::surface)
-
-    @Composable
-    fun checkUnspecifiedContentColor(color: Color) =
-        color.takeOrElse(MaterialTheme.colorScheme::onSurface)
 
     /** ["0 - 6" -> Blue], ["6 - 17" -> Green], ..., ["101 - " -> Purple] */
     fun getThresholdsToColors() = thresholds
