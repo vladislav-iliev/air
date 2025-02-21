@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger
 class InMemoryUserLocationDao : Dao {
 
     private var lastId = AtomicInteger(0)
-    private val locations = sortedMapOf<Int, UserLocation>(Int::compareTo)
+    private val locations = mutableMapOf<Int, UserLocation>()
 
     override suspend fun get(id: Int) = locations[id] ?: throw NoSuchElementException()
 
