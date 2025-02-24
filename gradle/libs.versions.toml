@@ -18,6 +18,7 @@ runner = "1.0.2"
 espressoCore = "3.0.2"
 jetbrainsKotlinJvm = "2.1.0"
 junitVersion = "1.2.1"
+runnerVersion = "1.6.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +39,7 @@ room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-runner = { module = "androidx.test:runner", version.ref = "runnerVersion" }
 runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
 espresso-core = { group = "com.android.support.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
