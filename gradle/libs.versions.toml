@@ -11,9 +11,9 @@ paging = "3.3.6"
 
 room = "2.6.1"
 
-datastore-preferences = "1.1.2"
+datastore-preferences = "1.1.3"
 
-agp = "8.8.1"
+agp = "8.8.2"
 junit = "4.13.2"
 runner = "1.0.2"
 espressoCore = "3.0.2"
