@@ -37,5 +37,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.paging.runtime)
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
 }
