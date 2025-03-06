@@ -3,6 +3,7 @@ kotlin = "2.1.0"
 coreKtx = "1.15.0"
 ksp = "2.1.0-1.0.29"
 kotlinx-datetime = "0.4.0"
+coroutinesTest = "1.9.0"
 
 composeBom = "2025.02.00"
 
@@ -38,6 +39,7 @@ room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
 
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-runner = { module = "androidx.test:runner", version.ref = "runnerVersion" }
 runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
