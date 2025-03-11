@@ -1,11 +1,9 @@
 package com.vladislaviliev.air.user.testing
 
 import androidx.annotation.GuardedBy
-import androidx.paging.PagingSource
 import com.vladislaviliev.air.user.location.Dao
 import com.vladislaviliev.air.user.location.LocationNotFoundException
 import com.vladislaviliev.air.user.location.UserLocation
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlin.math.max
@@ -44,10 +42,7 @@ class InMemoryUserLocationDao : Dao {
         .filter { it != id }
         .forEach { mutex.withLock { locations.remove(it) } }
 
-    override fun newPagingSource(excluding: Int): PagingSource<Int, UserLocation> {
-        val locations = runBlocking { mutex.withLock { locations.values } }
-            .filter { it.id != excluding }
-            .sortedBy { it.name.first().uppercaseChar() }
-        return StaticListPagingSource(locations)
-    }
+    override fun newPagingSource(excluding: Int) = StaticListPagingSource(
+        locations.values.filter { it.id != excluding }.sortedBy { it.name.first().uppercaseChar() }
+    )
 }
