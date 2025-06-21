@@ -10,8 +10,8 @@ class InMemoryHistoryDao : HistoryDao {
 
     private val _state = MutableStateFlow(emptySet<HistoryReading>())
 
-    override suspend fun upsert(readings: Iterable<HistoryReading>) {
-        val newState = _state.value.toMutableSet().apply { addAll(readings) }
+    override suspend fun upsert(historyReading: Iterable<HistoryReading>) {
+        val newState = _state.value.toMutableSet().apply { addAll(historyReading) }
         _state.emit(newState)
     }
 

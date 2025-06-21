@@ -39,9 +39,7 @@ dependencies {
     implementation(libs.kotlinx.datetime)
 
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.material3)
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
@@ -51,6 +49,4 @@ dependencies {
     implementation(libs.datastore.preferences)
 
     testImplementation(libs.junit)
-    androidTestImplementation(libs.runner)
-    androidTestImplementation(libs.espresso.core)
 }

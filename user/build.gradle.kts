@@ -46,9 +46,7 @@ dependencies {
 
     implementation(libs.datastore.preferences)
 
-
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.runner)
     androidTestImplementation(libs.androidx.junit)
 }
