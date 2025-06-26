@@ -4,9 +4,10 @@ import com.vladislaviliev.air.readings.ReadingType
 import com.vladislaviliev.air.readings.downloader.metadata.Metadata
 import com.vladislaviliev.air.readings.history.HistoryReading
 import com.vladislaviliev.air.readings.live.LiveReading
-import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 class Downloader {
     private fun random() = (0..110).random().toDouble()
@@ -52,6 +53,7 @@ class Downloader {
         HistoryReading(6, ReadingType.PM10, random()),
     )
 
+    @OptIn(ExperimentalTime::class)
     fun download() = DownloadResult(
         newLiveReadings(),
         newHistoryReadings(),
