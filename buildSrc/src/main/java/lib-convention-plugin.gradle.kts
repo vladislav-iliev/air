@@ -1,9 +1,13 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("org.jetbrains.kotlin.android")
     id("com.android.library")
 }
 
 android {
+    group = "com.vladislaviliev.air"
+
     compileSdk = 35
 
     defaultConfig {
